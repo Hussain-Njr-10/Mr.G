@@ -270,6 +270,28 @@
   }
   
   .dh-pagination {
-    display: none;
+    display: flex;
+    justify-content: center;
+    bottom: 2rem;
+    padding: 0 2rem;
+    gap: 1rem;
+  }
+  
+  .dh-progress-bar {
+    display: none; /* Hide progress bar on mobile to save space */
+  }
+
+  .dh-page-num {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dh-title {
+    font-size: 3rem;
+  }
+  
+  .dh-cards-wrapper {
+    height: 280px;
   }
 }
