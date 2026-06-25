@@ -1,0 +1,164 @@
+.fleet-showcase {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  background-color: var(--color-bg);
+  position: relative;
+}
+
+.fs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.fs-header {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fs-logo-mark {
+  margin-bottom: 0.5rem;
+}
+
+.fs-title {
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  line-height: 1;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.fs-desc {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+/* Image section */
+.fs-image-wrapper {
+  margin-top: 5rem;
+  width: 100%;
+  height: 60vh; /* Big panoramic image */
+  position: relative;
+  z-index: 1;
+}
+
+.fs-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 70%;
+}
+
+/* Stats Section */
+.fs-stats-section {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.fs-stats-header {
+  margin-bottom: 4rem;
+}
+
+.fs-stats-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+.fs-stats-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+}
+
+.fs-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.fs-stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.fs-stat-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.fs-card-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+
+.fs-card-number {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.fs-card-headline {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+.fs-card-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .fs-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fleet-showcase {
+    padding-top: 120px;
+  }
+  .fs-title {
+    font-size: 3rem;
+  }
+  .fs-image-wrapper {
+    height: 40vh;
+    margin-top: 3rem;
+  }
+  .fs-stats-section {
+    margin-top: 4rem;
+  }
+}
